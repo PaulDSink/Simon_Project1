@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header, footer {
+    background-color: #ada8a8;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    justify-content: center;
+    max-height: 150px;
+    min-height: 75px;
+    border-bottom: 2px solid black;
+}
+
+footer {
+    justify-content: flex-end;
+    max-height: 100px;
+    min-height: 50px;
+    border-top: 2px solid black;
+}
+.content {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameboard {
+    background-color: #ada8a8;
+    border: 2px solid black;
+    border-radius: 100%;
+    margin: 50px 25px;
+    height: 65vh;
+    width: 65vh;
+    min-width: 65vh;
+}
+
+h3 {
+    margin: 10px;
+}
