@@ -21,6 +21,8 @@ Lastly, my gold outcome will be focused on perfecting the game. I will focus on 
 
 ### Wireframe
 
+![Wireframe Picture](Wireframe.png)
+
 ## Example
 
 ## Features
