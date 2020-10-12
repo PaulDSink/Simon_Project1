@@ -35,7 +35,7 @@ footer {
     margin: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -46,10 +46,24 @@ footer {
     margin: 50px 25px;
     height: 65vh;
     width: 65vh;
+    /* min-height: 300px; */
     min-width: 65vh;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    height: 100%;
+    width: 17vh;
+    margin-left: 5px;
+}
+
+.right {
+    height: 100%;
+    width: 17vh;
+    text-align: center;
+    margin-right: 5px;
 }
 
 #red {
@@ -91,6 +105,12 @@ footer {
 .gamecenter {  
     grid-row: 1 / span 2;
     grid-column: 1 / span 2;
+    height: 20vh;
+    width: 20vh;
+    /* min-height: 92px; */
+    min-width: 20vh;
+    border-radius: 50%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +121,7 @@ footer {
     border: 2px solid black;
     height: 20vh;
     width: 20vh;
+    /* min-height: 92px; */
     min-width: 20vh;
     border-radius: 50%;
     display: flex;
@@ -113,6 +134,7 @@ footer {
     border: 2px solid black;
     height: 17vh;
     width: 17vh;
+    /* min-height: 78px; */
     min-width: 17vh;
     border-radius: 50%;
     display: flex;
@@ -123,4 +145,62 @@ footer {
 
 h3 {
     margin: 10px;
+}
+
+@media (max-width: 550px){
+    .gameboard {
+        max-height: 275px;
+        max-width: 275px;
+        min-height: 275px;
+        min-width: 275px;
+    }
+    .gamecenter {
+        max-height: 85px;
+        max-width: 85px;
+        min-height: 85px;
+        min-width: 85px;
+    }
+    .center-circle {
+        max-height: 85px;
+        max-width: 85px;
+        min-height: 85px;
+        min-width: 85px;
+    }
+    .start {
+        max-height: 72px;
+        max-width: 72px;
+        min-height: 72px;
+        min-width: 72px;
+    }
+}
+
+@media (max-height: 550px){
+    .gameboard {
+        max-height: 275px;
+        max-width: 275px;
+        min-height: 275px;
+        min-width: 275px;
+    }
+    .gamecenter {
+        max-height: 85px;
+        max-width: 85px;
+        min-height: 85px;
+        min-width: 85px;
+    }
+    .center-circle {
+        max-height: 85px;
+        max-width: 85px;
+        min-height: 85px;
+        min-width: 85px;
+    }
+    .start {
+        max-height: 72px;
+        max-width: 72px;
+        min-height: 72px;
+        min-width: 72px;
+    }
+}
+
+.btnPressed {
+    box-shadow: inset 0px 0px 14px 6px rgba(0,0,0,0.72);
 }
