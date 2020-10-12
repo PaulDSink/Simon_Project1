@@ -46,6 +46,7 @@ function checkColor() {
 }
 
 function btnClicked() {
+    event.preventDefault();
     resetAnimation();
     removeColorBtnEvent();
     console.log('clicked');
@@ -54,6 +55,7 @@ function btnClicked() {
 }
 
 function clickAnimation() {
+    event.preventDefault();
     this.classList.add('btnPressed');
     if(this.id == 'red') {
         redBtn.style.backgroundColor = redColorIllum;
@@ -78,14 +80,6 @@ function resetAnimation() {
 function playerTurn() {
     turn.innerText = 'Player\'s Turn!';
     console.log('playerturn');
-    redBtn.addEventListener('mouseup', btnClicked);
-    redBtn.addEventListener('mousedown', clickAnimation);
-    yellowBtn.addEventListener('mouseup', btnClicked);
-    yellowBtn.addEventListener('mousedown', clickAnimation);
-    blueBtn.addEventListener('mouseup', btnClicked);
-    blueBtn.addEventListener('mousedown', clickAnimation);
-    greenBtn.addEventListener('mouseup', btnClicked);
-    greenBtn.addEventListener('mousedown', clickAnimation);
     //events for mobile phone useage
     redBtn.addEventListener('touchend', btnClicked);
     redBtn.addEventListener('touchstart', clickAnimation);
@@ -95,18 +89,19 @@ function playerTurn() {
     blueBtn.addEventListener('touchstart', clickAnimation);
     greenBtn.addEventListener('touchend', btnClicked);
     greenBtn.addEventListener('touchstart', clickAnimation);
+    //events for regular device useage
+    redBtn.addEventListener('mouseup', btnClicked);
+    redBtn.addEventListener('mousedown', clickAnimation);
+    yellowBtn.addEventListener('mouseup', btnClicked);
+    yellowBtn.addEventListener('mousedown', clickAnimation);
+    blueBtn.addEventListener('mouseup', btnClicked);
+    blueBtn.addEventListener('mousedown', clickAnimation);
+    greenBtn.addEventListener('mouseup', btnClicked);
+    greenBtn.addEventListener('mousedown', clickAnimation);
 }
 
 function removeColorBtnEvent() {
     console.log('events removed');
-    redBtn.removeEventListener('mouseup', btnClicked);
-    redBtn.removeEventListener('mousedown', clickAnimation);
-    yellowBtn.removeEventListener('mouseup', btnClicked);
-    yellowBtn.removeEventListener('mousedown', clickAnimation);
-    blueBtn.removeEventListener('mouseup', btnClicked);
-    blueBtn.removeEventListener('mousedown', clickAnimation);
-    greenBtn.removeEventListener('mouseup', btnClicked);
-    greenBtn.removeEventListener('mousedown', clickAnimation);
     //events for mobile phone useage
     redBtn.removeEventListener('touchend', btnClicked);
     redBtn.removeEventListener('touchstart', clickAnimation);
@@ -116,6 +111,15 @@ function removeColorBtnEvent() {
     blueBtn.removeEventListener('touchstart', clickAnimation);
     greenBtn.removeEventListener('touchend', btnClicked);
     greenBtn.removeEventListener('touchstart', clickAnimation);
+    //events for regular device useage
+    redBtn.removeEventListener('mouseup', btnClicked);
+    redBtn.removeEventListener('mousedown', clickAnimation);
+    yellowBtn.removeEventListener('mouseup', btnClicked);
+    yellowBtn.removeEventListener('mousedown', clickAnimation);
+    blueBtn.removeEventListener('mouseup', btnClicked);
+    blueBtn.removeEventListener('mousedown', clickAnimation);
+    greenBtn.removeEventListener('mouseup', btnClicked);
+    greenBtn.removeEventListener('mousedown', clickAnimation);
 }
 
 function resetColors() {
@@ -170,23 +174,26 @@ function addRandomColor() {
 }
 
 function startGame() {
+    event.preventDefault();
     resetAnimation();
-    startBtn.removeEventListener('mouseup', startGame);
-    startBtn.removeEventListener('mousedown', clickAnimation);
     //events for mobile phone useage
     startBtn.removeEventListener('touchend', startGame);
     startBtn.removeEventListener('touchstart', clickAnimation);
+    //events for regular device useage
+    startBtn.removeEventListener('mouseup', startGame);
+    startBtn.removeEventListener('mousedown', clickAnimation);
     addRandomColor();
     console.log(randomSequence);
 }
 
 
 function startBtnEventListener(){
-    startBtn.addEventListener('mouseup', startGame);
-    startBtn.addEventListener('mousedown', clickAnimation);
     //events for mobile phone useage
     startBtn.addEventListener('touchend', startGame);
     startBtn.addEventListener('touchstart', clickAnimation);
+    //events for regular device useage
+    startBtn.addEventListener('mouseup', startGame);
+    startBtn.addEventListener('mousedown', clickAnimation);
 }
 
 startBtnEventListener();
