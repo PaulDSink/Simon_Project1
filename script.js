@@ -154,7 +154,9 @@ function addRandomColor() {
 function startGame() {
     resetAnimation();
     startBtn.removeEventListener('mouseup', startGame);
-    startBtn.removeEventListener('mousedown', btnClicked);
+    startBtn.removeEventListener('mousedown', clickAnimation);
+    startBtn.removeEventListener('touchend', startGame);
+    startBtn.removeEventListener('touchstart', clickAnimation);
     addRandomColor();
     console.log(randomSequence);
 }
@@ -163,6 +165,8 @@ function startGame() {
 function startBtnEventListener(){
     startBtn.addEventListener('mouseup', startGame);
     startBtn.addEventListener('mousedown', clickAnimation);
+    startBtn.addEventListener('touchend', startGame);
+    startBtn.addEventListener('touchstart', clickAnimation);
 }
 
 startBtnEventListener();
