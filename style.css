@@ -178,29 +178,29 @@ h3 {
 
 @media (max-width: 768px){
     .gameboard {
-        max-height: 225px;
-        max-width: 225px;
-        min-height: 225px;
-        min-width: 225px;
+        max-height: 250px;
+        max-width: 250px;
+        min-height: 250px;
+        min-width: 250px;
         margin: 10px 10px;
     }
     .gamecenter {
-        max-height: 69px;
-        max-width: 69px;
-        min-height: 69px;
-        min-width: 69px;
+        max-height: 77px;
+        max-width: 77px;
+        min-height: 77px;
+        min-width: 77px;
     }
     .center-circle {
-        max-height: 69px;
-        max-width: 69px;
-        min-height: 69px;
-        min-width: 69px;
+        max-height: 77px;
+        max-width: 77px;
+        min-height: 77px;
+        min-width: 77px;
     }
     .start {
-        max-height: 59px;
-        max-width: 59px;
-        min-height: 59px;
-        min-width: 59px;
+        max-height: 65px;
+        max-width: 65px;
+        min-height: 65px;
+        min-width: 65px;
         font-size: small;
     }
     .content {
