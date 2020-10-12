@@ -86,6 +86,15 @@ function playerTurn() {
     blueBtn.addEventListener('mousedown', clickAnimation);
     greenBtn.addEventListener('mouseup', btnClicked);
     greenBtn.addEventListener('mousedown', clickAnimation);
+    //events for mobile phone useage
+    redBtn.addEventListener('touchend', btnClicked);
+    redBtn.addEventListener('touchstart', clickAnimation);
+    yellowBtn.addEventListener('touchend', btnClicked);
+    yellowBtn.addEventListener('touchstart', clickAnimation);
+    blueBtn.addEventListener('touchend', btnClicked);
+    blueBtn.addEventListener('touchstart', clickAnimation);
+    greenBtn.addEventListener('touchend', btnClicked);
+    greenBtn.addEventListener('touchstart', clickAnimation);
 }
 
 function removeColorBtnEvent() {
@@ -98,6 +107,15 @@ function removeColorBtnEvent() {
     blueBtn.removeEventListener('mousedown', clickAnimation);
     greenBtn.removeEventListener('mouseup', btnClicked);
     greenBtn.removeEventListener('mousedown', clickAnimation);
+    //events for mobile phone useage
+    redBtn.removeEventListener('touchend', btnClicked);
+    redBtn.removeEventListener('touchstart', clickAnimation);
+    yellowBtn.removeEventListener('touchend', btnClicked);
+    yellowBtn.removeEventListener('touchstart', clickAnimation);
+    blueBtn.removeEventListener('touchend', btnClicked);
+    blueBtn.removeEventListener('touchstart', clickAnimation);
+    greenBtn.removeEventListener('touchend', btnClicked);
+    greenBtn.removeEventListener('touchstart', clickAnimation);
 }
 
 function resetColors() {
@@ -155,6 +173,7 @@ function startGame() {
     resetAnimation();
     startBtn.removeEventListener('mouseup', startGame);
     startBtn.removeEventListener('mousedown', clickAnimation);
+    //events for mobile phone useage
     startBtn.removeEventListener('touchend', startGame);
     startBtn.removeEventListener('touchstart', clickAnimation);
     addRandomColor();
@@ -165,6 +184,7 @@ function startGame() {
 function startBtnEventListener(){
     startBtn.addEventListener('mouseup', startGame);
     startBtn.addEventListener('mousedown', clickAnimation);
+    //events for mobile phone useage
     startBtn.addEventListener('touchend', startGame);
     startBtn.addEventListener('touchstart', clickAnimation);
 }
