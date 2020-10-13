@@ -25,6 +25,10 @@ Lastly, my gold outcome will be focused on perfecting the game. I will focus on 
 
 ## Example
 
+### Gameplay
+
+![Gameplay Gif](SimonGamePlay.gif)
+
 ## Features
 
 ## Installation
