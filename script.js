@@ -18,14 +18,26 @@ const yellowBtn = document.querySelector('#yellow');
 const blueBtn = document.querySelector('#blue');
 const greenBtn = document.querySelector('#green');
 const score = document.querySelector('#score');
+const highscore = document.querySelector('#highscore');
 const turn = document.querySelector('#turn');
 
 const colors = ['red', 'yellow', 'blue', 'green'];
 let randomSequence = [];
 let playerSequence = [];
 
+function displayHighScore() {
+    highscore.innerText = `Highscore: ${localStorage.highscore}`;
+}
+
+function saveHighScore() {
+    if(randomSequence.length - 1 > parseInt(localStorage.highscore)) {
+        localStorage.highscore = String(randomSequence.length - 1);
+    }
+    displayHighScore();
+}
 
 function resetGame() {
+    saveHighScore();
     randomSequence = [];
     playerSequence = [];
     startBtnEventListener();
@@ -208,5 +220,7 @@ function startBtnEventListener(){
     startBtn.addEventListener('mouseup', startGame);
     startBtn.addEventListener('mousedown', clickAnimation);
 }
+
+displayHighScore();
 
 startBtnEventListener();
