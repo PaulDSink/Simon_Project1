@@ -21,17 +21,22 @@ const score = document.querySelector('#score');
 const highscore = document.querySelector('#highscore');
 const turn = document.querySelector('#turn');
 
+const storage = window.localStorage;
+
 const colors = ['red', 'yellow', 'blue', 'green'];
 let randomSequence = [];
 let playerSequence = [];
 
 function displayHighScore() {
-    highscore.innerText = `Highscore: ${localStorage.highscore}`;
+    if(storage.highscore == undefined) {
+        storage.setItem('highscore', '0');
+    }
+    highscore.innerText = `Highscore: ${storage.highscore}`;
 }
 
 function saveHighScore() {
-    if(randomSequence.length - 1 > parseInt(localStorage.highscore)) {
-        localStorage.highscore = String(randomSequence.length - 1);
+    if(randomSequence.length - 1 > parseInt(storage.highscore)) {
+        storage.highscore = String(randomSequence.length - 1);
     }
     displayHighScore();
 }
