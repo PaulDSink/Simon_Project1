@@ -31,7 +31,7 @@ function displayHighScore() {
     if(storage.highscore == undefined) {
         storage.setItem('highscore', '0');
     }
-    highscore.innerText = `Highscore: ${storage.highscore}`;
+    highscore.innerText = `Your Highscore: ${storage.highscore}`;
 }
 
 function saveHighScore() {
