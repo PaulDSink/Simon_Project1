@@ -7,6 +7,11 @@ const yellowColorIllum = '#ffff00';
 const blueColorIllum = '#0000ff';
 const greenColorIllum = '#00ff00';
 
+const redSound = document.querySelector('#red-sound');
+const yellowSound = document.querySelector('#yellow-sound');
+const blueSound = document.querySelector('#blue-sound');
+const greenSound = document.querySelector('#green-sound');
+
 const startBtn = document.querySelector('#start');
 const redBtn = document.querySelector('#red');
 const yellowBtn = document.querySelector('#yellow');
@@ -59,12 +64,16 @@ function clickAnimation() {
     this.classList.add('btnPressed');
     if(this.id == 'red') {
         redBtn.style.backgroundColor = redColorIllum;
+        redSound.play();
     } else if (this.id == 'yellow') {
         yellowBtn.style.backgroundColor = yellowColorIllum;
+        yellowSound.play();
     } else if (this.id == 'blue') {
         blueBtn.style.backgroundColor = blueColorIllum;
+        blueSound.play();
     } else if (this.id == 'green') {
         greenBtn.style.backgroundColor = greenColorIllum;
+        greenSound.play();
     }
 }
 
@@ -132,21 +141,25 @@ function resetColors() {
 
 function illuminateRed() {
     redBtn.style.backgroundColor = redColorIllum;
+    redSound.play();
     setTimeout(resetColors, 900);
 }
 
 function illuminateYellow() {
     yellowBtn.style.backgroundColor = yellowColorIllum;
+    yellowSound.play();
     setTimeout(resetColors, 900)
 }
 
 function illuminateBlue() {
     blueBtn.style.backgroundColor = blueColorIllum;
+    blueSound.play();
     setTimeout(resetColors, 900)
 }
 
 function illuminateGreen() {
     greenBtn.style.backgroundColor = greenColorIllum;
+    greenSound.play();
     setTimeout(resetColors, 900)
 }
 
