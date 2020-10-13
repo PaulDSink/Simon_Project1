@@ -29,6 +29,10 @@ Lastly, my gold outcome will be focused on perfecting the game. I will focus on 
 
 ![Gameplay Gif](SimonGamePlay.gif)
 
+### Player Loss
+
+![Loss Gif](SimonGamePlayLose.gif)
+
 ## Features
 
 ## Installation
