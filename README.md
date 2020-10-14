@@ -17,13 +17,11 @@ I initially estimated this portion of the project to take me approximately 18 ho
 
 ### Silver
 
-Next, I worked on meeting my silver level requirements. This consisted of
-
-My second outome, silver, will be focused on improving the styling of the project. This will be important so that it feels like a real Simon game. I will focus on giving the game a more realistic look using "illuminating" buttons, sounds effects, click animation, and more! Because I am only editing what is already in place, this will take much less time. I estimate this portion to take 7-8 hours to complete.
+Next, I worked on meeting my silver level requirements. This consisted of adding detail to my styling, creating button click animations, adding sound effects, including the player's score and focusing on functionality on different devices. To complete these goals, I used more DOM manipulation and different styling to accomidate different screen sizes. I also used different event listeners so that the game would function identically on a touch screen as it would on a device using a mouse. I initially planned for this portion to take 7-8 hours. I completed it in about 6 hours.
 
 ### Gold
 
-Lastly, my gold outcome will be focused on perfecting the game. I will focus on additional interactivity such as an all time highscore tracker that keeps track even when the page is reloaded and potentially additional game modes. This portion would be an additional 10 hours to complete.
+Lastly, my gold level was focused on completing the final touches of the game. This included a high score that tracked and displayed the highest score reached, additional game modes, and cleaning up and simplifying code. I did not complete all the goals in my gold level but was able to get some of my ideas into my application. I was unable to create a high score function to track all players' scores and display the highest one, but I was able to learn how to use localStorage in order to track a specific user's highest score on an individual system. Even when the page is reloaded, the player can see their top score. I was also able to organize and make comments to my code to help anyone contributing or reading my code to help explain how functions work and what each snippet of code is accomplishing. I initially assumed this portion would take about 10 hours to complete. I spent about 6 hours on the things I was able to accomplish.
 
 ### Wireframe
 
