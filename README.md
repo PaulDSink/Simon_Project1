@@ -29,18 +29,29 @@ Looking forward, there are still things for me to complete regarding this projec
 
 ### Wireframe
 
-![Wireframe Picture](Wireframe.png)
+![Wireframe Picture](Wireframe.png)  
+Shown above is an image of my wireframe, the initial concept I envisioned my gameboard looking. The final outcome of my gameboard can be seen below in the Gameplay section.
 
 ## Example
 
 ### Gameplay
 
-![Gameplay Gif](SimonGamePlay.gif)
+![Gameplay Gif](SimonGamePlay.gif)  
 The gameplay for Simon is simple. The game displays a sequence of random colors, starting with only one color. The player then needs to press the buttons in that sequence correctly. After each round that the player correctly returns the sequence, one new color will be added. See above gif.
+
+### User Stories
+
+* The game begins only when the player prompts it to.
+* The sequence is easy to follow, with unique color animations and sound effects for each button.
+* The player can see their current score at any time during the game.
+* The player can see their highscore at any time during the game.
+* The player cannot accidentally press a button when it is not their turn.
+* Button clicks have a realistic look and feel when the player presses one.
+* When the player loses, they are informed and are able to start a new game.
 
 ### Player Loss
 
-![Loss Gif](SimonGamePlayLose.gif)
+![Loss Gif](SimonGamePlayLose.gif)  
 In the event the player does not successfully return the correct sequence, an alert will pop up indicating where the player went wrong. The player can then press the start button to begin a new game. See above gif.
 
 ## Features
