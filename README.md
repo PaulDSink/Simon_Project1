@@ -52,7 +52,7 @@ The gameplay for Simon is simple. The game displays a sequence of random colors,
 ### Player Loss
 
 ![Loss Gif](SimonGamePlayLose.gif)  
-In the event the player does not successfully return the correct sequence, an alert will pop up indicating where the player went wrong. The player can then press the start button to begin a new game. See above gif.
+In the event the player does not successfully return the correct sequence, another screen will display indicating where the player went wrong. The player can then press reset to go back to the gameboard and then press the start button to begin a new game. See above gif.
 
 ## Features
 
