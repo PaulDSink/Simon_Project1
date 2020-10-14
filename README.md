@@ -28,12 +28,22 @@ Lastly, my gold outcome will be focused on perfecting the game. I will focus on 
 ### Gameplay
 
 ![Gameplay Gif](SimonGamePlay.gif)
+The gameplay for Simon is simple. The game displays a sequence of random colors, starting with only one color. The player then needs to press the buttons in that sequence correctly. After each round that the player correctly returns the sequence, one new color will be added. See above gif.
 
 ### Player Loss
 
 ![Loss Gif](SimonGamePlayLose.gif)
+In the event the player does not successfully return the correct sequence, an alert will pop up indicating where the player went wrong. The player can then press the start button to begin a new game. See above gif.
 
 ## Features
+
+I used the following technologies on this project:
+
+* HTML5
+* CSS3
+* JavaScript
+* DOM Manipulation
+* Local Storage
 
 ## Installation
 
