@@ -138,9 +138,9 @@ function resetAnimation() {
     resetColors();
 }
 
+//function to display player turn and add event listeners for colored buttons when it is players turn
 function playerTurn() {
     turn.innerText = 'Player\'s Turn!';
-    console.log('playerturn');
     //events for mobile phone useage
     redBtn.addEventListener('touchend', btnClicked);
     redBtn.addEventListener('touchstart', clickAnimation);
@@ -161,8 +161,8 @@ function playerTurn() {
     greenBtn.addEventListener('mousedown', clickAnimation);
 }
 
+//function to not allow player to press buttons when it is not player's turn
 function removeColorBtnEvent() {
-    console.log('events removed');
     //events for mobile phone useage
     redBtn.removeEventListener('touchend', btnClicked);
     redBtn.removeEventListener('touchstart', clickAnimation);
@@ -183,6 +183,7 @@ function removeColorBtnEvent() {
     greenBtn.removeEventListener('mousedown', clickAnimation);
 }
 
+//resets the color of button when randomSequence is being displayed
 function resetColors() {
     redBtn.style.backgroundColor = redColorOriginal;
     yellowBtn.style.backgroundColor = yellowColorOriginal;
@@ -190,6 +191,7 @@ function resetColors() {
     greenBtn.style.backgroundColor = greenColorOriginal;
 }
 
+//following functions used for illuminating buttons while randomSequence is being displayed
 function illuminateRed() {
     redBtn.style.backgroundColor = redColorIllum;
     redSound.play();
@@ -214,6 +216,7 @@ function illuminateGreen() {
     setTimeout(resetColors, 900)
 }
 
+//function to begin displaying randomSequence. setTimeouts are used to create proper timing of color lighting up and displaying
 function displaySequence() {
     randomSequence.forEach((color, index) => {
         if(color == 'red') {
@@ -228,6 +231,7 @@ function displaySequence() {
     })
 }
 
+//adds random color every turn to randomSequence
 function addRandomColor() {
     turn.innerText = 'Memorize the sequence!';
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -237,6 +241,7 @@ function addRandomColor() {
     setTimeout(playerTurn, 1000 * randomSequence.length);
 }
 
+//kicks off game after player presses Start! button
 function startGame() {
     event.preventDefault();
     resetAnimation();
@@ -248,10 +253,9 @@ function startGame() {
     startBtn.removeEventListener('mouseup', startGame);
     startBtn.removeEventListener('mousedown', clickAnimation);
     addRandomColor();
-    console.log(randomSequence);
 }
 
-
+//adds event listeners for start button
 function startBtnEventListener(){
     //events for mobile phone useage
     startBtn.addEventListener('touchend', startGame);
@@ -261,6 +265,7 @@ function startBtnEventListener(){
     startBtn.addEventListener('mousedown', clickAnimation);
 }
 
+//envoking these two functions when page is first loaded so the hig score is displayed and the game is ready for the player to press Start! to kick off the game
 displayHighScore();
 
 startBtnEventListener();
