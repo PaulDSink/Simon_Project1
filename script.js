@@ -1,3 +1,4 @@
+//variables for the hex codes of different colors used
 const redColorOriginal = '#ff000075';
 const yellowColorOriginal = '#ffff0075';
 const blueColorOriginal = '#0000ff75';
@@ -7,11 +8,13 @@ const yellowColorIllum = '#ffff00';
 const blueColorIllum = '#0000ff';
 const greenColorIllum = '#00ff00';
 
+//variables for audio
 const redSound = document.querySelector('#red-sound');
 const yellowSound = document.querySelector('#yellow-sound');
 const blueSound = document.querySelector('#blue-sound');
 const greenSound = document.querySelector('#green-sound');
 
+//variables for various buttons and on screen elements. Necessary for DOM manipulation
 const startBtn = document.querySelector('#start');
 const redBtn = document.querySelector('#red');
 const yellowBtn = document.querySelector('#yellow');
@@ -26,12 +29,15 @@ const loseScreen = document.querySelector('#lose-screen');
 const loseMessage = document.querySelector('#lose-message');
 const resetBtn = document.querySelector('#reset');
 
+//localStorage is for remembering the player's highest score
 const storage = window.localStorage;
 
+//arrays. colors is possible color choices that can be added to the randomSequence and playerSequence arrays.
 const colors = ['red', 'yellow', 'blue', 'green'];
 let randomSequence = [];
 let playerSequence = [];
 
+//changes the value of high score displayed in document
 function displayHighScore() {
     if(storage.highscore == undefined) {
         storage.setItem('highscore', '0');
@@ -39,6 +45,7 @@ function displayHighScore() {
     highscore.innerText = `Your Highscore: ${storage.highscore}`;
 }
 
+//updates the players high score if it is larger than the current high score in localStorage. Then envokes function to display new high score
 function saveHighScore() {
     if(randomSequence.length - 1 > parseInt(storage.highscore)) {
         storage.highscore = String(randomSequence.length - 1);
@@ -46,18 +53,22 @@ function saveHighScore() {
     displayHighScore();
 }
 
+//hides the game screen and displays the losing screen
 function displayLoseScreen() {
     content.classList.add('hidden');
     loseScreen.classList.remove('hidden');
 }
 
+//when lose screen is displayed, function resets back to normal, hiding lose screen and redisplaying game screen
 function resetLoseScreen() {
     content.classList.remove('hidden');
     loseScreen.classList.add('hidden');
 }
 
+//event to envoke resetLoseScreen function using reset button
 resetBtn.addEventListener('click', resetLoseScreen);
 
+//function to reset game after player loses. Resets arrays and elements and allows player to hit start again to begin new game
 function resetGame() {
     saveHighScore();
     startBtn.children[0].innerText = "Start!";
@@ -67,6 +78,7 @@ function resetGame() {
     startBtnEventListener();
 }
 
+//function used to verify whether player selected correct color button after each click. If incorrect, lose screen is displayed and game is reset.
 function checkColor() {
     if(playerSequence.length < randomSequence.length) {
         if(playerSequence[playerSequence.length - 1] == randomSequence[playerSequence.length - 1]) {
@@ -88,15 +100,16 @@ function checkColor() {
     }
 }
 
+//function to add color pressed by player and envoke checkColor function to verify. Also, resets color and shadow box of button initialized on mousedown event or touchstart event
 function btnClicked() {
     event.preventDefault();
     resetAnimation();
     removeColorBtnEvent();
-    console.log('clicked');
     playerSequence.push(this.id);
     checkColor();
 }
 
+//function to give visual effect of button being clicked. If color button is click, the color lights up and corresponding sound plays. Also, shadow box styling is applied to give a button pressed down look. when mouse or finger is released, these animations are reset.
 function clickAnimation() {
     event.preventDefault();
     this.classList.add('btnPressed');
@@ -115,6 +128,7 @@ function clickAnimation() {
     }
 }
 
+//reseting animations from above function, clickAnimation.
 function resetAnimation() {
     redBtn.classList.remove('btnPressed');
     yellowBtn.classList.remove('btnPressed');
@@ -174,7 +188,6 @@ function resetColors() {
     yellowBtn.style.backgroundColor = yellowColorOriginal;
     blueBtn.style.backgroundColor = blueColorOriginal;
     greenBtn.style.backgroundColor = greenColorOriginal;
-    console.log('colors reset');
 }
 
 function illuminateRed() {
