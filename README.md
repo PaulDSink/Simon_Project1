@@ -23,6 +23,10 @@ Next, I worked on meeting my silver level requirements. This consisted of adding
 
 Lastly, my gold level was focused on completing the final touches of the game. This included a high score that tracked and displayed the highest score reached, additional game modes, and cleaning up and simplifying code. I did not complete all the goals in my gold level but was able to get some of my ideas into my application. I was unable to create a high score function to track all players' scores and display the highest one, but I was able to learn how to use localStorage in order to track a specific user's highest score on an individual system. Even when the page is reloaded, the player can see their top score. I was also able to organize and make comments to my code to help anyone contributing or reading my code to help explain how functions work and what each snippet of code is accomplishing. I initially assumed this portion would take about 10 hours to complete. I spent about 6 hours on the things I was able to accomplish.
 
+### Unsolved Problems
+
+Looking forward, there are still things for me to complete regarding this project. I would still like to create a high score functionality as mentioned in my Gold section above. I would also like to potentially create additional game modes. Lastly, I aim to perfect the functionality of the game on touch screen devices such as mobile phones. The touch events do not work quite as well as mouse click events and the sound effects are also prone to skip occasionally when using a mobile device. I estimate that it would take another 10-12 hours to solve these remaining issues.
+
 ### Wireframe
 
 ![Wireframe Picture](Wireframe.png)
