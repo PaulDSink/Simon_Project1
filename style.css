@@ -224,3 +224,7 @@ h3 {
 .audio {
     display: none;
 }
+
+.hidden {
+    display: none;
+}

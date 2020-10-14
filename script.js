@@ -21,6 +21,11 @@ const score = document.querySelector('#score');
 const highscore = document.querySelector('#highscore');
 const turn = document.querySelector('#turn');
 
+const content = document.querySelector('.content');
+const loseScreen = document.querySelector('#lose-screen');
+const loseMessage = document.querySelector('#lose-message');
+const resetBtn = document.querySelector('#reset');
+
 const storage = window.localStorage;
 
 const colors = ['red', 'yellow', 'blue', 'green'];
@@ -41,8 +46,22 @@ function saveHighScore() {
     displayHighScore();
 }
 
+function displayLoseScreen() {
+    content.classList.add('hidden');
+    loseScreen.classList.remove('hidden');
+}
+
+function resetLoseScreen() {
+    content.classList.remove('hidden');
+    loseScreen.classList.add('hidden');
+}
+
+resetBtn.addEventListener('click', resetLoseScreen);
+
 function resetGame() {
     saveHighScore();
+    startBtn.children[0].innerText = "Start!";
+    turn.innerText = 'Press Start!';
     randomSequence = [];
     playerSequence = [];
     startBtnEventListener();
@@ -53,7 +72,8 @@ function checkColor() {
         if(playerSequence[playerSequence.length - 1] == randomSequence[playerSequence.length - 1]) {
             playerTurn();
         } else {
-            alert(`Wrong color! You clicked ${playerSequence[playerSequence.length - 1]} but the correct color was ${randomSequence[playerSequence.length - 1]}. Press the start button to try again!`);
+            loseMessage.innerText = `Wrong color! You clicked ${playerSequence[playerSequence.length - 1]} but the correct color was ${randomSequence[playerSequence.length - 1]}. Press the reset button and try again!`;
+            displayLoseScreen();
             resetGame();
         }
     } else if(playerSequence.length == randomSequence.length) {
@@ -61,7 +81,8 @@ function checkColor() {
             playerSequence = [];
             setTimeout(addRandomColor, 500);
         } else {
-            alert(`Wrong color! You clicked ${playerSequence[playerSequence.length - 1]} but the correct color was ${randomSequence[playerSequence.length - 1]}. Press the start button to try again!`);
+            loseMessage.innerText = `Wrong color! You clicked ${playerSequence[playerSequence.length - 1]} but the correct color was ${randomSequence[playerSequence.length - 1]}. Press the reset button and try again!`;
+            displayLoseScreen();
             resetGame();
         }
     }
@@ -206,6 +227,7 @@ function addRandomColor() {
 function startGame() {
     event.preventDefault();
     resetAnimation();
+    startBtn.children[0].innerText = "";
     //events for mobile phone useage
     startBtn.removeEventListener('touchend', startGame);
     startBtn.removeEventListener('touchstart', clickAnimation);
